@@ -1,4 +1,7 @@
 # project2
 # TPRG FINAL PROJECT
 # COMMIT One
-
+# Server Code Working
+A socket is created by the server code. Then it is put against a particular host address. Finally, the server code waits for incoming requests. When connected from a client, the server accepts it, and the GUI shows an active connection. The loop continuously gets JSON-formatted data from the client and then goes back to the loop. This information, which shows the system properties, is actually printed to the console. On disconnection of the client, the LED status is synchronized with the GUI. Exception handling catches and shows up in the console for all errors. Tkinter GUI enters its main loop, displaying in real time the status of a connection and any possible changes in the LEDs.
+# Client Code Working
+First, the server and client are used on the same machine (Raspberry Pi). Then, the client code initiates a connection with the server. Generates a Tkinter GUI comprised of labels signifying the status of the connection, temperature of the core, speeds of clocks, memory utilization, as well as the voltage of the node. This status of the connection is reflected by the GUI upon connecting to the server. Finally, the client passes through a cycle where it obtains live data of the system from the Raspberry Pi, converts it to JSON and submits it onto the server Changes in LED status are also communicated to the GUI, and so on, dynamically. After data sending has completed (after 50 iterations), the GUI updates to show a disconnected state. The exception handling allows for error management while the Tkinter main loop refreshes the graphics user interface.
